@@ -54,7 +54,7 @@ def fuzzCheck(gList):
                     fuzzedList.remove(i)
                     fuzzedList.append(j)
                     #print("changed "+i+" into: "+j) more debbuging and helped test variables
-                    
+
     fuzzedList.sort()
     return fuzzedList
 
@@ -63,7 +63,7 @@ print("paste copied path of file")
 
 filePath = input()
 #"C:\Users\Jamesb\OneDrive - The University of Chicago\Documents\Keller Snack voting.csv"
-print(fuzzCheck(csvOrganizer(filePath.replace('"', ""), "What snack are you craving for? (please limit to 3 snacks)")))
-
+snackFuzzList = (fuzzCheck(csvOrganizer(filePath.replace('"', ""), "What snack are you craving for? (please limit to 3 snacks)")))
+print(snackFuzzList)
 
 
